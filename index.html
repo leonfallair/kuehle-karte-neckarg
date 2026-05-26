@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kühle Karte Neckargemünd</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="sidebar">
+    <h2>🌿 Kühle Orte</h2>
+
+    <h3>Natur</h3>
+    <label class="filter-item">
+      <input type="checkbox" class="filter-cb" data-cat="forest" checked />
+      🌲 Wälder
+    </label>
+    <label class="filter-item">
+      <input type="checkbox" class="filter-cb" data-cat="water" checked />
+      💧 Wasser &amp; Flüsse
+    </label>
+    <label class="filter-item">
+      <input type="checkbox" class="filter-cb" data-cat="park" checked />
+      🏞️ Parks
+    </label>
+
+    <h3>Freizeit</h3>
+    <label class="filter-item">
+      <input type="checkbox" class="filter-cb" data-cat="playground" checked />
+      🛝 Spielplätze
+    </label>
+    <label class="filter-item">
+      <input type="checkbox" class="filter-cb" data-cat="bench" checked />
+      🪑 Bänke
+    </label>
+
+    <h3>Wasser/Brunnen</h3>
+    <label class="filter-item">
+      <input type="checkbox" class="filter-cb" data-cat="fountain" checked />
+      ⛲ Brunnen
+    </label>
+    <label class="filter-item">
+      <input type="checkbox" class="filter-cb" data-cat="drinking" checked />
+      🚰 Trinkwasser
+    </label>
+
+    <h3>Verkehr &amp; Gebäude</h3>
+    <label class="filter-item">
+      <input type="checkbox" class="filter-cb" data-cat="busstop" checked />
+      🚌 Bushaltestellen
+    </label>
+    <label class="filter-item">
+      <input type="checkbox" class="filter-cb" data-cat="building" />
+      🏛️ Öffentl. Gebäude
+    </label>
+
+    <h3>Kartenstil</h3>
+    <select id="basemap-select">
+      <option value="streets">Streets</option>
+      <option value="satellite">Satellite</option>
+    </select>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
