@@ -5,7 +5,8 @@
 let currentShadowHour = 16;
 
 function getShadowImage(hour) {
-  return `data/shadows/shadow_${hour}00.png`;
+  const h = String(hour).padStart(2, "0");
+  return `data/shadows/shadow_${h}00.png`;
 }
 
 function createShadowLayer(map) {
